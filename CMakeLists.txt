@@ -23,4 +23,5 @@ set(${PROJECT_NAME}_CXX_FLAGS "")
 set(${PROJECT_NAME}_LINK_FLAGS "")
 include(${CMAKE_SOURCE_DIR}/cmake/create_cmake_config_files.cmake)
 
-include(cmake/enable_doxygen_documentation.cmake)
+#doxygen seems to hang forever. Deactivated for the moment
+#include(cmake/enable_doxygen_documentation.cmake)
