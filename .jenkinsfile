@@ -1,3 +1,3 @@
 @Library('ChimeraTK') _
 env.DISABLE_CPPCHECK="yes"
-buildTestDeploy([], 'https://github.com/ChimeraTK/exprtk-interface')
+autojob([], 'https://github.com/ChimeraTK/exprtk-interface')
