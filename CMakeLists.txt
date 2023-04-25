@@ -11,7 +11,13 @@ include(cmake/set_version_numbers.cmake)
 # header-only library
 add_library(${PROJECT_NAME} INTERFACE)
 
-# Install the library and the executables
+# let cmake target know where includes will be
+target_include_directories(${PROJECT_NAME} INTERFACE
+    "$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/exprtk>"
+    # relative to ${CMAKE_INSTALL_PREFIX} but don't explicitly mention it
+    "$<INSTALL_INTERFACE:include>")
+
+# Install the library and the executables, and cmake-config
 install( TARGETS ${PROJECT_NAME}
          EXPORT ${PROJECT_NAME}Targets)
 
