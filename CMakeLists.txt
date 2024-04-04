@@ -13,7 +13,7 @@ add_library(${PROJECT_NAME} INTERFACE)
 
 # let cmake target know where includes will be
 target_include_directories(${PROJECT_NAME} INTERFACE
-    "$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/exprtk>"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/exprtk>"
     # relative to ${CMAKE_INSTALL_PREFIX} but don't explicitly mention it
     "$<INSTALL_INTERFACE:include>")
 
