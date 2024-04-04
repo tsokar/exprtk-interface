@@ -24,4 +24,4 @@ install( TARGETS ${PROJECT_NAME}
 install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/exprtk/exprtk.hpp" DESTINATION include )
 
 set(PROVIDES_EXPORTED_TARGETS 1)
-include(${CMAKE_SOURCE_DIR}/cmake/create_cmake_config_files.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/create_cmake_config_files.cmake)
